@@ -50,52 +50,52 @@ export default class From extends Component {
   render() {
     return (
       <div>
-      <Modal
-      title="添加"
-      visible={this.props.visible}
-      onCancel={this.handleCancel}
-      footer={null}	
-      maskClosable={false}
-      destroyOnClose={true}
-    >
-    <Form
-      {...layout}
-      name="basic"
-      initialValues={this.props.opt}
-      onFinish={this.onFinish}
-    >
-      <Form.Item
-        label="姓名"
-        name="name"
-        rules={[{ required: true, message: '姓名必填!' }]}
+        <Modal
+        title="添加"
+        visible={this.props.visible}
+        onCancel={this.handleCancel}
+        footer={null}	
+        maskClosable={false}
+        destroyOnClose={true}
       >
-        <Input />
-      </Form.Item>
+          <Form
+            {...layout}
+            name="basic"
+            initialValues={this.props.opt}
+            onFinish={this.onFinish}
+          >
+            <Form.Item
+              label="姓名"
+              name="name"
+              rules={[{ required: true, message: '姓名必填!' }]}
+            >
+              <Input />
+            </Form.Item>
 
-      <Form.Item
-        label="年龄"
-        name="age"
-        rules={[{ required: true, message: '年龄必填!' }]}
-      >
-      <Input />
-      </Form.Item>
-      <Form.Item
-        label="地址"
-        name="msg"
-        rules={[{ required: true, message: '地址必填!' }]}
-      >
-      <Input />
-      </Form.Item>
-      <Form.Item {...tailLayout}>
-      <Button style={{marginRight:30}} onClick={this.handleCancel}>
-        取消
-      </Button>
-      <Button type="primary" htmlType="submit">
-        保存
-      </Button>
-    </Form.Item>
-    </Form>
-    </Modal>
+            <Form.Item
+              label="年龄"
+              name="age"
+              rules={[{ required: true, message: '年龄必填!' }]}
+            >
+            <Input />
+            </Form.Item>
+            <Form.Item
+              label="地址"
+              name="msg"
+              rules={[{ required: true, message: '地址必填!' }]}
+            >
+            <Input />
+            </Form.Item>
+            <Form.Item {...tailLayout}>
+            <Button style={{marginRight:30}} onClick={this.handleCancel}>
+              取消
+            </Button>
+            <Button type="primary" htmlType="submit">
+              保存
+            </Button>
+          </Form.Item>
+          </Form>
+        </Modal>
       </div>
     )
   }
