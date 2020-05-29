@@ -18,15 +18,6 @@ export default class From extends Component {
   //关闭遮罩层取消功能
   handleCancel = () => {
     this.props.shows()
-    const obj = {
-      name:"",
-      age:"",
-      msg:""
-    }
-    this.props.dispatch({
-      type:'home/update',
-      payload:obj
-    })
   };
   //保存
    onFinish = values => {
